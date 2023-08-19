@@ -1,3 +1,10 @@
 # Files
 .DS_Store
+*.o
+*.so
+*.a
+
+# Folders
+objs
+lib
 
