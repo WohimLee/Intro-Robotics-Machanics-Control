@@ -3,12 +3,13 @@ MAIN   := Examples/main.c
 MAIN.o := objs/main.o
 
 c_srcs := $(shell find src -name "*.c")
-c_objs := $(patsubst src/%.c,objs/%.o,$(cpp_srcs))
+c_objs := $(patsubst src/%.c,objs/%.o,$(c_srcs))
 
 
 include_dirs := ./include
-linking_libs := exercise
-library_dirs := ./lib
+linking_libs := 
+library_dirs := ./lib 
+				
 
 I_options := $(include_dirs:%=-I%)
 l_options := $(linking_libs:%=-l%)
@@ -16,7 +17,7 @@ L_options := $(library_dirs:%=-L%)
 r_options := $(library_dirs:%=-Wl,-rpath=%)
 
 dynamic_options := -fPIC
-compile_options := -g -O3 -w -std=c++14 $(I_options)
+compile_options := -g -O3 -w  $(I_options)
 linking_options := $(l_options) $(L_options) $(r_options)
 
 $(MAIN.o) : $(MAIN)
@@ -29,19 +30,19 @@ objs/%.o : src/%.c
 	@mkdir -p $(dir $@)
 	@g++ -c $^ -o $@ $(compile_options) $(dynamic_options)
 
-lib/libexercise.so : $(cpp_objs)
+lib/libexercise.so : $(c_objs)
 	@echo [INFO]: Generate $@, including: $^
 	@mkdir -p $(dir $@)
-	@g++ -shared $^ -o $@
+	@g++ -shared $^ -o $@ $(linking_options)
 
 
 dynamic : lib/libexercise.so
 
 
-workspace/exec : $(MAIN.o) dynamic
+workspace/exec : $(MAIN.o)
 	@echo [INFO]: Link $< to $@
 	@mkdir -p $(dir $@)
-	@g++ $< -o $@ $(linking_options)
+	@g++ $< -o $@ 
 
 run : workspace/exec
 	@./$<
@@ -52,8 +53,8 @@ clean :
 
 
 debug :
-	@echo $(MAIN)
-	@echo $(MAIN.o)
+	@echo $(linking_options)
+
 
 
 .PHONY : run clean debug dynamic
