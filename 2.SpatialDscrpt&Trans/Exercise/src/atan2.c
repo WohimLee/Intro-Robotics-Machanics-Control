@@ -1,7 +1,7 @@
 
 
 #include <math.h>
-#include "functions.h"
+#include "atan2.h"
 
 double my_atan2(double y, double x) {
     const double PI = 3.14159265358979323846;
