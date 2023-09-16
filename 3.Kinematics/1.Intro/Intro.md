@@ -24,7 +24,8 @@ Hence, the study of the kinematics of manipulators refers to all the geometrical
 
 that cause them constitute the problem of dynamics, which is the subject of Chapter 6.
 
-In this chapter, we consider position and orientation of the manipulator linkages in static situations. In Chapters 5 and 6, we wifi consider the kinematics when velocities and accelerations are involved.
+In this chapter, we consider `position` and `orientation` of the manipulator linkages in static situations. In Chapters 5 and 6, we will consider the kinematics when `velocities` and `accelerations` are involved.
 
-In order to deal with the complex geometry of a manipulator, we will affix frames to the various parts of the mechanism and then describe the relationships between these frames. The study of manipulator kinematics involves, among other things, how the locations of these frames change as the mechanism articulates. The central topic of this chapter is a method to compute the position and orientation of the manipulator's end-effector relative to the base of the manipulator as a function
-of the joint variables.
+In order to deal with the complex geometry of a manipulator, we will affix frames to the various parts of the mechanism and then describe the relationships between these frames. The study of manipulator kinematics involves, among other things, how the locations of these frames change as the mechanism articulates. 
+
+The central topic of this chapter is a method to compute the position and orientation of the manipulator's end-effector relative to the base of the manipulator as a function of the joint variables.
