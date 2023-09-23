@@ -3,8 +3,11 @@
 *.o
 *.so
 *.a
+test.py
 
 # Folders
 objs
 lib
+Test
+test
 
