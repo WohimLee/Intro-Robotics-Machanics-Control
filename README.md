@@ -3,7 +3,7 @@
 
 Book: Introduction to robotics: mechanics and control
 
-Chapters: 1-6
+Sussex Chapters: 1-6
 
 
 
