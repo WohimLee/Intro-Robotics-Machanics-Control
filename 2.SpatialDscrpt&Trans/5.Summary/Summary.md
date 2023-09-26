@@ -7,7 +7,8 @@ translation, we will not need to explicitly consider the two simpler cases since
 As a general tool to represent frames, we have introduced the homogeneous transform, a $4 \times 4$ matrix containing orientation and position information.
 
 We have introduced three interpretations of this homogeneous transform:
-1. It is a description of a frame. ${ }_B^A T$ describes the frame $\{B\}$ relative to the frame $\{A\}$. Specifically, the columns of ${ }_B^A R$ are unit vectors defining the directions of the principal axes of $\{B\}$, and ${ }^A P_{B O R G}$ locates the position of the origin of $\{B\}$.
+1. It is a description of a frame. ${ }_B^A T$ describes the frame $\{B\}$ relative to the frame $\{A\}$. Specifically, the columns of ${ }_B^A R$ are unit vectors defining the directions of the principal axes of $\{B\}$, and ${ }^A P_{B\ O R G}$ locates the position of the origin of $\{B\}$.
+
 2. It is a transform mapping. ${ }_B^A T$ maps ${ }^B P \rightarrow{ }^A P$.
 3. It is a transform operator. $T$ operates on ${ }^A P_1$ to create ${ }^A P_2$.
 
